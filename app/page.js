@@ -45,7 +45,7 @@ export default function Home() {
           <p>Select an category and get a quote :)</p>
         </div>
       )}
-      <button onClick={getQuotes} className={styles.button}>
+      <button disabled={loading} onClick={getQuotes} className={styles.button}>
         {loading ? "Getting a quote..." : "Get a quote"}
       </button>
     </div>
