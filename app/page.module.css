@@ -2,10 +2,12 @@
   width: 90%;
   max-width: 500px;
   background-color: rgb(217, 233, 247);
-  min-height: 40vh;
+  min-height: 60vh;
   border-radius: 40px;
-  display: grid;
-  place-items: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15,23 +17,18 @@
 .quoteWrapper {
   background-color: rgb(227, 227, 227);
   width: 100%;
-  height: 100%;
+  height: 30vh;
   gap: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 0px 0px 40px 40px;
 }
 
 .quote {
   text-align: center;
   width: 90%;
-}
-
-.author {
-  width: 80%;
-  text-align: end;
 }
 
 .button {
@@ -52,4 +49,44 @@
 }
 .button:disabled {
   cursor: progress;
+}
+
+.select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  margin: auto;
+  width: 80%;
+  padding: 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: black;
+  border-radius: 50px;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  text-align: center;
+}
+
+.select::-ms-expand {
+  display: none;
+}
+.select:focus {
+  outline: none;
+}
+
+.select option {
+  color: inherit;
+  min-height: 0.5rem;
+}
+
+.select option:hover {
+  cursor: pointer;
+}
+
+.error {
+  width: 100%;
+  text-align: center;
+  color: red;
 }
